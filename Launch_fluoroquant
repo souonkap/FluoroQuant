@@ -3,9 +3,9 @@
 eval "$(conda shell.zsh activate fltkr)"
 #tbtkr
 
-cd "$(dirname "$(find ~/ -type f -name fluorotracker.py -print -quit | head -1)")"
+cd "$(dirname "$(find ~/ -type f -name fluoroquant.py -print -quit | head -1)")"
 
-#python.app fluorotracker.py
+#python.app fluoroquant.py
 
-python fluorotracker.py
+python fluoroquant.py
 
