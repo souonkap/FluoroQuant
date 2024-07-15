@@ -1,0 +1,77 @@
+#!/bin/zsh
+
+#this script should install the dependencies needed to run static tracker. 
+
+#the installer assumes that miniconda or anaconda is installed because the conda command is necessary
+
+echo "Installing Static Tracker and its dependencies..."
+
+# 1: initiate the conda comand to be able to run the scripts
+
+echo ""
+echo ""
+echo ""
+
+echo "...Initializing conda..."
+echo ""
+echo ""
+
+conda init --user --all
+
+echo "...Done..."
+echo ""
+echo ""
+
+# 2: create a virtual invironment to install the dependencies
+
+echo ""
+
+echo "...Creating a Virtual environment for all dependencies..."
+echo ""
+echo ""
+
+conda create -n fltkr python
+#=3.6.10
+
+echo "...Done..."
+echo ""
+echo ""
+
+echo ""
+
+echo "...Installing dependencies..."
+
+echo ""
+echo ""
+
+eval "$(conda shell.zsh activate fltkr)"
+#conda activate fltkr
+
+echo ""
+echo ""
+
+echo "...Installing WxPython..."
+
+conda install wxpython
+
+echo "...Done..."
+echo ""
+
+echo ""
+
+echo "...Installing OpenCV..."
+
+pip install opencv-python
+#conda install conda-forge::opencv
+echo ""
+
+echo "...Installing pandas..."
+
+pip install pandas
+echo ""
+
+echo "...Done..."
+
+eval "$(conda shell.zsh deactivate)"
+
+echo "...Installation Completed."

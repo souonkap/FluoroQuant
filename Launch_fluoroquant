@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+eval "$(conda shell.zsh activate fltkr)"
+#tbtkr
+
+cd "$(dirname "$(find ~/ -type f -name fluorotracker.py -print -quit | head -1)")"
+
+#python.app fluorotracker.py
+
+python fluorotracker.py
+
